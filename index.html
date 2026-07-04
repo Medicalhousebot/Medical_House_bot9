@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>درسنامه جامع و کاربردی بیماری دیابت - جلسه ۹ فارماکولوژی ۲</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800&display=swap');
+
+    :root {
+      --primary:    #1a237e;
+      --secondary:  #283593;
+      --accent1:    #0277bd;
+      --accent2:    #00838f;
+      --accent3:    #6a1b9a;
+      --accent4:    #ad1457;
+      --accent5:    #e65100;
+      --bg:         #f0f4ff;
+      --card:       #ffffff;
+      --text:       #1a1a2e;
+      --muted:      #546e7a;
+      --border:     #c5cae9;
+      --green:      #1b5e20;
+      --greenlight: #e8f5e9;
+      --redlight:   #ffebee;
+      --red:        #b71c1c;
+      --yellowlight:#fff8e1;
+      --yellow:     #f57f17;
+      --bluelight:  #e3f2fd;
+      --blue:       #0d47a1;
+      --purplelight:#f3e5f5;
+      --purple:     #4a148c;
+      --teallight:  #e0f7fa;
+      --teal:       #006064;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.9;
+      font-size: 15px;
+    }
+
+    /* ===== COVER ===== */
+    .cover {
+      background: linear-gradient(135deg, #1a237e 0%, #283593 40%, #0277bd 100%);
+      color: white;
+      text-align: center;
+      padding: 60px 30px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: -80px;
+      width: 300px; height: 300px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .cover::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: -60px;
+      width: 250px; height: 250px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .cover .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50px;
+      padding: 6px 20px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+    .cover h1 {
+      font-size: 2.4em;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    .cover h2 {
+      font-size: 1.3em;
+      font-weight: 400;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+    .cover .meta {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .cover .meta-item {
+      background: rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 10px 20px;
+      font-size: 13px;
+    }
+    .cover .meta-item span { display: block; font-weight: 700; font-size: 15px; margin-top: 3px; }
+
+    /* ===== TOC ===== */
+    .toc {
+      background: white;
+      margin: 30px auto;
+      max-width: 900px;
+      border-radius: 16px;
+      padding: 30px 35px;
+      box-shadow: 0 4px 20px rgba(26,35,126,0.08);
+      border-right: 5px solid var(--primary);
+    }
+    .toc h3 {
+      font-size: 1.2em;
+      color: var(--primary);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toc ol {
+      padding-right: 20px;
+    }
+    .toc ol li {
+      padding: 5px 0;
+      color: var(--accent1);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .toc ol li:hover { color: var(--primary); }
+
+    /* ===== MAIN WRAPPER ===== */
+    .main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    /* ===== SECTION HEADER ===== */
+    .section-header {
+      border-radius: 14px;
+      padding: 18px 25px;
+      margin: 40px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      font-size: 1.25em;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+    .section-header .icon {
+      font-size: 1.5em;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .sh-blue   { background: linear-gradient(135deg, #1565c0, #0288d1); }
+    .sh-purple { background: linear-gradient(135deg, #6a1b9a, #ab47bc); }
+    .sh-teal   { background: linear-gradient(135deg, #00695c, #26a69a); }
+    .sh-red    { background: linear-gradient(135deg, #b71c1c, #ef5350); }
+    .sh-orange { background: linear-gradient(135deg, #e65100, #ff7043); }
+    .sh-green  { background: linear-gradient(135deg, #1b5e20, #43a047); }
+    .sh-indigo { background: linear-gradient(135deg, #283593, #5c6bc0); }
+    .sh-pink   { background: linear-gradient(135deg, #880e4f, #e91e63); }
+    .sh-brown  { background: linear-gradient(135deg, #4e342e, #8d6e63); }
+    .sh-cyan   { background: linear-gradient(135deg, #006064, #00acc1); }
+
+    /* ===== SUBSECTION ===== */
+    .subsection {
+      background: white;
+      border-radius: 12px;
+      padding: 22px 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-top: 3px solid transparent;
+    }
+    .sub-blue   { border-top-color: #1565c0; }
+    .sub-purple { border-top-color: #6a1b9a; }
+    .sub-teal   { border-top-color: #00695c; }
+    .sub-red    { border-top-color: #b71c1c; }
+    .sub-orange { border-top-color: #e65100; }
+    .sub-green  { border-top-color: #1b5e20; }
+    .sub-indigo { border-top-color: #283593; }
+    .sub-pink   { border-top-color: #880e4f; }
+    .sub-brown  { border-top-color: #4e342e; }
+    .sub-cyan   { border-top-color: #006064; }
+
+    .subsection h4 {
+      font-size: 1.05em;
+      font-weight: 700;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px dashed var(--border);
+      color: var(--secondary);
+    }
+
+    /* ===== INFO BOX ===== */
+    .infobox {
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 14px 0;
+      display: flex;
+      gap: 12px;
+      font-size: 14px;
+    }
+    .infobox .ib-icon { font-size: 1.3em; flex-shrink: 0; margin-top: 1px; }
+    .ib-blue   { background: var(--bluelight);   border-right: 4px solid #1565c0; color: #0d1b5e; }
+    .ib-green  { background: var(--greenlight);  border-right: 4px solid #2e7d32; color: #1b3a1f; }
+    .ib-red    { background: var(--redlight);    border-right: 4px solid #c62828; color: #5c0000; }
+    .ib-yellow { background: var(--yellowlight); border-right: 4px solid #f9a825; color: #4a2c00; }
+    .ib-purple { background: var(--purplelight); border-right: 4px solid #6a1b9a; color: #2d0048; }
+    .ib-teal   { background: var(--teallight);   border-right: 4px solid #006064; color: #003033; }
+
+    /* ===== LIST STYLES ===== */
+    .list-styled {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0;
+    }
+    .list-styled li {
+      padding: 5px 0 5px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14px;
+      border-bottom: 1px dotted #e8eaf6;
+    }
+    .list-styled li:last-child { border-bottom: none; }
+    .list-styled li::before {
+      content: '◈';
+      color: var(--accent1);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .list-styled.green li::before  { color: #2e7d32; }
+    .list-styled.red li::before    { color: #c62828; }
+    .list-styled.purple li::before { color: #6a1b9a; }
+    .list-styled.teal li::before   { color: #006064; }
+    .list-styled.orange li::before { color: #e65100; }
+
+    /* ===== TAGS / PILLS ===== */
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 2px 2px;
+    }
+    .tag-blue   { background: #e3f2fd; color: #0d47a1; }
+    .tag-red    { background: #ffebee; color: #b71c1c; }
+    .tag-green  { background: #e8f5e9; color: #1b5e20; }
+    .tag-purple { background: #f3e5f5; color: #4a148c; }
+    .tag-orange { background: #fff3e0; color: #e65100; }
+    .tag-teal   { background: #e0f7fa; color: #006064; }
+    .tag-yellow { background: #fff8e1; color: #f57f17; }
+    .tag-pink   { background: #fce4ec; color: #880e4f; }
+
+    /* ===== TABLE ===== */
+    .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    table thead tr {
+      background: var(--primary);
+      color: white;
+    }
+    table thead th {
+      padding: 12px 14px;
+      text-align: right;
+      font-weight: 700;
+    }
+    table tbody tr:nth-child(even) { background: #f5f7ff; }
+    table tbody tr:hover { background: #e8eaf6; }
+    table tbody td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e0e4f8;
+      vertical-align: top;
+    }
+    table tbody tr:last-child td { border-bottom: none; }
+
+    /* ===== HIGHLIGHT BADGE ===== */
+    .hbadge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, #fff176, #ffee58);
+      color: #4a2c00;
+      border: 1px solid #f9a825;
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* ===== GRID 2-COL ===== */
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 14px 0;
+    }
+    @media(max-width:640px){ .grid2 { grid-template-columns: 1fr; } }
+
+    /* ===== MINI CARD ===== */
+    .mini-card {
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 13.5px;
+    }
+    .mc-blue   { background: #e8eaf6; border-right: 3px solid #3949ab; }
+    .mc-green  { background: #e8f5e9; border-right: 3px solid #388e3c; }
+    .mc-red    { background: #ffebee; border-right: 3px solid #e53935; }
+    .mc-purple { background: #f3e5f5; border-right: 3px solid #8e24aa; }
+    .mc-orange { background: #fff3e0; border-right: 3px solid #f4511e; }
+    .mc-teal   { background: #e0f7fa; border-right: 3px solid #00838f; }
+    .mini-card h5 { font-weight: 700; margin-bottom: 8px; font-size: 14px; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.85);
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+      margin-top: 60px;
+    }
+
+    /* ===== KEY-VALUE ROW ===== */
+    .kv-row {
+      padding: 8px 0;
+      font-size: 14px;
+      border-bottom: 1px dotted #e0e4f8;
+      line-height: 1.8;
+    }
+    .kv-key {
+      font-weight: 700;
+      color: var(--secondary);
+      display: inline;
+      margin-left: 6px;
+    }
+    .kv-value {
+      color: var(--text);
+      display: inline;
+    }
+
+    strong.em { color: #b71c1c; }
+    strong.em2 { color: #1565c0; }
+    strong.em3 { color: #2e7d32; }
+    strong.em4 { color: #6a1b9a; }
+
+    /* ===== رفع باگ تراز خطوط و پلتفرم‌های موبایل ===== */
+    .li-content {
+      flex: 1;
+      display: inline;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    /* ===== سیستم تعاملی یادداشت‌های درون‌متنی مینیاتوری ===== */
+    .note-marker {
+      background-color: #ffd54f !important;
+      border: 1px solid #ffb300 !important;
+      color: #000 !important;
+      border-radius: 4px !important;
+      cursor: pointer !important;
+      padding: 1px 4px !important;
+      margin: 0 3px !important;
+      font-size: 11px !important;
+      user-select: none !important;
+      display: inline-block !important;
+      vertical-align: middle !important;
+      font-weight: bold !important;
+      position: relative;
+      animation: notePulse 2s infinite;
+    }
+    @keyframes notePulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    /* کدهای CSS خالص جهت سازگاری و نمایش یادداشت در نمایشگر فایل آفلاین iOS */
+    .note-tooltip {
+      display: none;
+      position: absolute;
+      bottom: 125%;
+      right: 0;
+      background: #37474f;
+      color: #ffffff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      min-width: 180px;
+      max-width: 250px;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      white-space: normal;
+      line-height: 1.5;
+      font-weight: normal;
+      text-align: right;
+    }
+    .note-marker:hover .note-tooltip, .note-marker:active .note-tooltip {
+      display: block !important;
+    }
+
+    /* ===== ساختار پنجره مودال مدیریت یادداشت‌ها ===== */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(26, 35, 126, 0.5);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      direction: rtl;
+    }
+    .modal-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      border-top: 5px solid var(--primary);
+    }
+    .modal-card h4 {
+      margin-bottom: 14px;
+      color: var(--primary);
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .modal-textarea {
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      resize: none;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      font-size: 13px;
+    }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-danger { background: var(--red); color: white; }
+    .btn-secondary { background: #eceff1; color: #37474f; }
+
+    /* ===== نوار ابزار تعاملی انتهای صفحه ===== */
+    #highlight-panel {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+      border-radius: 50px;
+      padding: 10px 20px;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid var(--primary);
+      direction: rtl;
+      width: max-content;
+      max-width: 95%;
+    }
+    #highlight-panel span {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .hl-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .hl-btn:hover { transform: scale(1.15); }
+    .hl-btn-yellow { background-color: #fff59d; }
+    .hl-btn-green  { background-color: #c8e6c9; }
+    .hl-btn-blue   { background-color: #bbdefb; }
+    .hl-btn-pink   { background-color: #f8bbd0; }
+    .panel-action-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .panel-action-btn-red { background: var(--red); }
+  </style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="badge">فارماکولوژی بالینی ۲</div>
+  <h1>درسنامه جامع و کاربردی بیماری دیابت</h1>
+  <div class="meta">
+    <div class="meta-item">نویسنده: <span>احمدرضا عبداللهی پور</span></div>
+    <div class="meta-item">جلسه: <span>۹ (دیابت)</span></div>
+    <div class="meta-item">برای دریافت فایل های بیشتر به بات تلگرامی مراجعه کنید
+                        
+<a href="https://t.me/Medical_house_bot" target="_blank" style="
+    display: inline-block;
+    padding: 5px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;">
+    🤖 شروع گفتگو با بات
+</a></div>
+
+  </div>
+</div>
+
+<div class="toc">
+  <h3>📋 فهرست مطالب درسنامه</h3>
+  <ol>
+    <li>مقدمه، تعریف و ماهیت پاتوفیزیولوژیک دیابت شیرین</li>
+    <li>عوارض میکروواسکولار و ماکروواسکولار دیابت (بیماری‌شناسی سیستمیک عروق)</li>
+    <li>طبقه‌بندی جامع انواع دیابت (نوع ۱، نوع ۲، بارداری و ثانویه)</li>
+    <li>دیابت نوع ۱: مکانیسم خودایمنی، کتوآسیدوز دیابتی (DKA) و عواقب تجویز کورتون پنهان</li>
+    <li>دیابت نوع ۲: پاتوژنز، پدیده لاغری (گرسنگی سلولی) و نشانه‌های بالینی</li>
+    <li>ریشه تاریخی نام‌گذاری "دیابت ملیتوس" (پیشینه تشخیص سنتی)</li>
+    <li>لایف‌استایل، اصلاح سبک زندگی و اشتباهات تغذیه‌ای بیماران</li>
+    <li>فیزیولوژی غده پانکراس، مکانیسم سلولی ترشح و اثرات آنابولیک انسولین</li>
+    <li>طبقه‌بندی فارماکولوژیک و بیوشیمیایی انواع انسولین تزریقی و کاربردهای بالینی</li>
+    <li>رژیم‌های انسولین‌تراپی بالینی (بیسال-بولوس و ترکیبی)، پایش دوز و عارضه لیپودیستروفی</li>
+    <li>عارضه اورژانسی هیپوگلیسمی و پروتکل نجات‌بخش بالینی در افراد هوشیار و کما</li>
+  </ol>
+</div>
+
+<div class="main">
+
+  <!-- ===================== SECTION 1 ===================== -->
+  <div class="section-header sh-blue">
+    <div class="icon">🔍</div>
+    <div>۱. مقدمه، تعریف و ماهیت پاتوفیزیولوژیک دیابت شیرین</div>
+  </div>
+
+  <div class="subsection sub-blue">
+    <h4>مفهوم پاتوفیزیولوژیک دیابت</h4>
+    <p>
+      بیماری دیابت در اصل با یک ویژگی ساختاری و بنیادی شناخته می‌شود: <strong class="em">عدم توانایی ورود گلوکز (قند) به درون سلول‌های بدن به هر دلیلی</strong>. این اختلال باعث بروز حالت‌های پاتولوژیک زیر در بدن می‌شود:
+    </p>
+    <ul class="list-styled">
+      <li><span class="li-content"><strong>هایپرگلیسمی (Hyperglycemia):</strong> وقتی قند به علت نبود انسولین یا عدم کارایی آن نمی‌تواند به سلول‌ها وارد شود، در خارج از سلول (جریان خون) تجمع یافته و قند خون به طور مداوم رو به افزایش می‌گذارد.</span></li>
+      <li><span class="li-content"><strong>افزایش تولید گلوکز توسط کبد:</strong> با توجه به ناتوانی ورود قند به سلول، کبد تحت تأثیر مکانیسم‌های جبرانی قرار گرفته و با فرآیندهایی نظیر شکستن گلیکوژن (گلیکوژنولیز) و تولید قند از مسیرهای غیرکربوهیدراتی (گلوکونئوژنز)، شروع به تولید و آزادسازی مداوم قند در خون می‌کند. این پدیده به بروز و استقرار یک هایپرگلیسمی مزمن می‌انجامد.</span></li>
+    </ul>
+    
+    <div class="infobox ib-blue">
+      <span class="ib-icon">ℹ️</span>
+      <div>
+        <strong>نکته کلیدی کلاس:</strong> در حقیقت، خود افزایش قند خون در کوتاه‌مدت (اگر به فازهای بحرانی حاد نرسد) مشکل اصلی به شمار نمی‌روی؛ بلکه آن چیزی که ناتوان‌کننده و بسیار آسیب‌رسان است، <strong>عوارض مزمن ناشی از دیابت</strong> است که سیستم‌های حیاتی بدن را تخریب می‌کند.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 2 ===================== -->
+  <div class="section-header sh-red">
+    <div class="icon">💔</div>
+    <div>۲. عوارض میکروواسکولار و ماکروواسکولار دیابت</div>
+  </div>
+
+  <div class="subsection sub-red">
+    <h4>الف) عوارض میکروواسکولار (درگیری عروق ریز)</h4>
+    <p>آسیب به ساختار ظریف عروق خونی ریز در ارگان‌های هدف، منشأ عوارض سه‌گانه زیر است:</p>
+    
+    <div class="grid2">
+      <div class="mini-card mc-red">
+        <h5>۱. نوروپاتی دیابتی (Diabetic Neuropathy)</h5>
+        <p>هایپرگلیسمی مزمن باعث تخریب عصب‌های محیطی (Peripheral Nerves) می‌شود.</p>
+        <ul class="list-styled red">
+          <li><span class="li-content"><strong>علائم حسی:</strong> ایجاد حس گزگز، سوزش و مورمور شدید در دست‌ها و پاها.</span></li>
+          <li><span class="li-content"><strong>کاهش حس درد:</strong> حس درد در اندام‌ها به شدت پایین می‌آید که بیمار را مستعد جراحت‌های پنهان، زخم پای دیابتی (Diabetic Foot) و عفونت‌های عمیق می‌کند.</span></li>
+          <li><span class="li-content"><strong>پیامد قلبی:</strong> آسیب به اعصاب اتونوم حسی قلب باعث بروز سکته‌های قلبی بدون درد (Silent MI) در بیماران دیابتی می‌شود که یک وضعیت اورژانسی بسیار فریبنده است.</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-red">
+        <h5>۲. نفروپاتی دیابتی (Diabetic Nephropathy)</h5>
+        <p>هایپرگلیسمی سبب تخریب تدریجی و ساختاری گلومرول‌های کلیه می‌گردد.</p>
+        <ul class="list-styled red">
+          <li><span class="li-content">دیابت (به‌خصوص دیابت نوع ۲) امروزه به عنوان شایع‌ترین و بالاترین دلیل ابتلا به نارسایی‌های مزمن کلیه (CKD) در جهان شناخته می‌شود که در نهایت بیمار را به سمت دیالیز هدایت می‌کند.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mini-card mc-orange" style="margin-top: 15px;">
+      <h5>۳. رتینوپاتی دیابتی (Diabetic Retinopathy)</h5>
+      <p>آسیب به مویرگ‌های خون‌رسان در لایه شبکیه چشم.</p>
+      <ul class="list-styled orange">
+        <li><span class="li-content">عروق شبکیه در این بیماران بسیار شکننده شده، مکرراً پاره می‌شوند و خونریزی‌های مداومی در بافت چشم رخ می‌دهد.</span></li>
+        <li><span class="li-content">پیامد پس از خونریزی‌های مکرر، تخریب تدریجی بینایی، ایجاد پلاک‌های انسدادی و کاهش دید شدید در شبکیه و در نهایت کوری است.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection sub-red">
+    <h4>ب) عوارض ماکروواسکولار (درگیری عروق بزرگ و حیاتی)</h4>
+    <p>دیابت فرآیند تصلب شرایین را به شدت تسریع می‌کند:</p>
+    <ul class="list-styled red">
+      <li><span class="li-content"><strong>آسیب به شریان‌های کرونری قلب:</strong> دیابت موجب بروز پاسخ‌های التهابی شدید در دیواره داخلی (اینتیما / Intima) شریان‌های کرونر می‌شود. این التهاب بستر را برای رسوب کلسترول و به دنبال آن رسوب کلسیم (Calcium) هموار می‌کند. با جمع شدن عوامل التهابی، فرآیند آتروسکلروز (Atherosclerosis) پیشرفت کرده و پلاک‌های آتروسکلروتیک شکل می‌گیرند. انسداد کامل عروق در نهایت به انفارکتوس میوکارد (سکته قلبی / MI) می‌انجامد.</span></li>
+      <li><span class="li-content"><strong>عروق مغزی (Cerebrovascular):</strong> دقیقاً همین پروسه تخریب اینتیما، التهاب و تشکیل پلاک در عروق تغذیه‌کننده مغز رخ می‌دهد که منجر به بروز سکته‌های مغزی (Strokes) در افراد دیابتی می‌گردد.</span></li>
+    </ul>
+    
+    <div class="infobox ib-red">
+      <span class="ib-icon">🚨</span>
+      <div>
+        <strong>تعریف بالینی کلی:</strong> به دلیل تنوع و شدت این عوارض سیستمیک بر تمام عروق ریز و درشت، دیابت را در اصطلاحات پزشکی <strong>"بیماری مادر بیماری‌ها"</strong> می‌نامند.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 3 ===================== -->
+  <div class="section-header sh-purple">
+    <div class="icon">📊</div>
+    <div>۳. طبقه‌بندی جامع انواع دیابت</div>
+  </div>
+
+  <div class="subsection sub-purple">
+    <h4>مرور انواع اصلی دیابت بر اساس طبقه‌بندی بالینی</h4>
+    <p>در کلینیک با سه فرم شاخص دیابت و تعدادی از علل فرعی روبرو هستیم:</p>
+    
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>نوع بیماری</th>
+            <th>نام‌های علمی جایگزین</th>
+            <th>مکانیسم پایه‌ای و پاتوژنز متمایز کننده</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>دیابت نوع ۱</strong></td>
+            <td>IDDM (Insulin-Dependent)</td>
+            <td>بیماری خودایمنی (Autoimmune)؛ تخریب کامل سلول‌های بتای پانکراس و فقدان تولید انسولین.</td>
+          </tr>
+          <tr>
+            <td><strong>دیابت نوع ۲</strong></td>
+            <td>NIDDM (Non-Insulin-Dependent)</td>
+            <td>دیابت غیروابسته به انسولین؛ مقاومت سلولی به انسولین به همراه ترشح ناکافی انسولین. شایع‌ترین نوع دیابت (۹۰٪ کل موارد).</td>
+          </tr>
+          <tr>
+            <td><strong>دیابت بارداری</strong></td>
+            <td>Gestational Diabetes (GDM)</td>
+            <td>کاهش حساسیت گیرنده‌های انسولین در مادر تحت تأثیر هورمون‌های ترشح‌شده از جفت. معمولاً پس از زایمان برطرف می‌شود، اما در برخی از زنان پایدار می‌ماند.</td>
+          </tr>
+          <tr>
+            <td><strong>سایر دیابت‌های فرعی</strong></td>
+            <td>Secondary Diabetes</td>
+            <td>دیابت ناشی از اختلالات ژنتیکی خاص، بیماری‌های حاد پانکراس، یا مصرف داروهای خاص (مانند کورتیکواستروئیدها).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 4 ===================== -->
+  <div class="section-header sh-teal">
+    <div class="icon">🧬</div>
+    <div>۴. دیابت نوع ۱: مکانیسم خودایمنی، کتوآسیدوز دیابتی (DKA) و عواقب تجویز کورتون پنهان</div>
+  </div>
+
+  <div class="subsection sub-teal">
+    <h4>مکانیسم خودایمنی و پاتوژنز تخریب سلول‌های بتا</h4>
+    <p>
+      در دیابت نوع ۱، یک فرآیند خودایمنی رخ می‌دهد که طی آن آنتی‌بادی‌های حساس علیه سلول‌های بتای جزایر لانگرهانس پانکراس تولید می‌شوند. 
+    </p>
+    <ul class="list-styled teal">
+      <li><span class="li-content">تولید این آنتی‌بادی‌های مخرب سلولی منجر به توقف کامل ترشح، عدم عملکرد و جلوگیری از تولید انسولین در پانکراس می‌شود.</span></li>
+      <li><span class="li-content">یک تحریک ساده مانند ابتلا به یک <strong>بیماری ویروسی</strong> در افراد مستعد ژنتیکی می‌تواند سیستم ایمنی را برای این تخریب سلولی تحریک و فعال کند.</span></li>
+    </ul>
+  </div>
+
+  <div class="subsection sub-teal">
+    <h4>مکانیسم بیوشیمیایی کتوآسیدوز دیابتی (DKA)</h4>
+    <p>زمانی که انسولین در بدن وجود نداشته باشد، گلوکز وارد سلول‌ها نمی‌شود. در پاسخ به این بحران انرژی:</p>
+    <ol style="margin-right:25px; margin-bottom: 15px; font-size:14px;">
+      <li>بدن شروع به شکستن چربی‌های ذخیره‌ای خود (لیپولیز) می‌کند تا از اسیدهای چرب انرژی تولید کند.</li>
+      <li>کبد اسیدهای چرب آزاد را به کتون‌ها (کتون‌بادی‌ها / Ketone Bodies) تبدیل می‌کند.</li>
+      <li>افزایش کتون‌بادی‌ها در خون منجر به کاهش شدید pH خون و ایجاد یک وضعیت فوق‌العاده خطرناک، حاد و کشنده به نام <strong>کتوآسیدوز دیابتی (DKA)</strong> می‌شود.</li>
+    </ol>
+
+    <div class="infobox ib-red">
+      <span class="ib-icon">🛑</span>
+      <div>
+        <strong>سناریوی بالینی کلاس در مورد خطر تجویز کورتون‌ها:</strong><br>
+        معمولاً هیچ پزشکی به صورت روتین برای اطفال سالم آزمایش قند خون تجویز نمی‌کند. به همین علت، دیابت نوع ۱ در اطفال معمولاً با تظاهر ناگهانی علائم حاد یا کتوآسیدوز (DKA) کشف می‌شود.
+        <br><strong>مثال تدریس:</strong> فرض کنید کودک یا جوانی به دیابت نوع ۱ پنهان (بدون علامت قبلی) مبتلاست و به دلیل ابتلا به سرفه‌های شدید و تنگی نفس به کلینیک آورده می‌شود. پزشک با اندیکاسیون کاهش التهاب ریه، یک کورتون قوی مانند <strong>آمپول دگزامتازون (Dexamethasone)</strong> به او تزریق می‌کند. کورتون قند خون را به شدت افزایش داده، لیپولیز و کتون‌سازی را فعال می‌کند و کودک بلافاصله به فاز حاد و شدید <strong>کتوآسیدوز دیابتی (DKA)</strong> سقوط می‌کند. بیمار بلافاصله باید در بخش مراقبت‌های ویژه (ICU) بستری شود. در این موارد اگر اسیدوز شدید به مغز آسیب نرسانده باشد، بیمار پس از چند روز پایش مداوم و درمان بهبود خواهد یافت.
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection sub-teal">
+    <h4>علائم و نشانه‌های تشخصی در اطفال</h4>
+    <p>علائم کلاسیک دیابت نوع ۱ شامل موارد زیر است:</p>
+    <ul class="list-styled teal">
+      <li><span class="li-content"><strong>پرادراری (Polyuria)</strong> و <strong>پرنوشی شدید (Polydipsia)</strong>.</span></li>
+      <li><span class="li-content"><strong>کاهش وزن ناگهانی:</strong> بیمار علی‌رغم داشتن اشتهای بسیار خوب، دچار کاهش وزن شدید می‌شود.</span></li>
+      <li><span class="li-content">ابتلا به <strong>عفونت‌های مکرر و مقاوم به درمان</strong>.</span></li>
+      <li><span class="li-content"><strong>تظاهر به صورت شب‌ادراری (Enuresis):</strong> در کودکان اطفالی که پیش از این کنترل ادرار داشتند، بروز ناگهانی شب‌ادراری یک زنگ خطر مهم است. با بررسی قند خون این کودکان می‌توان تشخیص دیابت نوع ۱ را قطعی کرد.</span></li>
+    </ul>
+    
+    <div class="mini-card mc-teal" style="margin-top: 15px;">
+      <h5>پروتکل درمان دیابت نوع ۱</h5>
+      <p>درمان این نوع دیابت کاملاً مشخص و قطعی است؛ این بیماران باید <strong>تا آخر عمرشان به صورت روزانه انسولین تزریق کنند</strong>. تشخیص زودهنگام و شروع سریع درمان با انسولین کلید جلوگیری از ورود بیمار به فاز مرگبار کتوآسیدوز دیابتی (DKA) است.</p>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 5 ===================== -->
+  <div class="section-header sh-orange">
+    <div class="icon">🍁</div>
+    <div>۵. دیابت نوع ۲: پاتوژنز، پدیده لاغری (گرسنگی سلولی) و نشانه‌های بالینی</div>
+  </div>
+
+  <div class="subsection sub-orange">
+    <h4>پاتوژنز و عوامل خطر (Risk Factors) در دیابت نوع ۲</h4>
+    <p>۹۰ درصد بیماران دیابتی را مبتلایان به نوع ۲ تشکیل می‌دهند. پاتوژنز و ریسک‌فاکتورها به شرح زیر است:</p>
+    <ul class="list-styled orange">
+      <li><span class="li-content"><strong>مکانیسم پایه:</strong> سلول‌ها نسبت به انسولین ترشح شده مقاومت دارند و انسولین نمی‌تواند فعالیت اصلی خود که ورود قند به داخل سلول است را به درستی انجام دهد، یا اینکه ترشح انسولین به اندازه کافی پاسخگوی نیاز بدن نیست.</span></li>
+      <li><span class="li-content"><strong>چاقی و چربی شکمی:</strong> بزرگترین عامل افزایش مقاومت سلول‌ها به انسولین است.</span></li>
+      <li><span class="li-content"><strong>کم‌تحرکی و سن بالا</strong>.</span></li>
+      <li><span class="li-content"><strong>سابقه خانوادگی و ژنتیک (ریسک‌فاکتور طلایی):</strong> ژنتیک در نوع ۲ به شدت قوی‌تر از نوع ۱ عمل می‌کند. اگر پدر یا مادر فردی دچار دیابت تیپ ۲ باشند، فرزندان آن‌ها به شدت مستعد ابتلا به دیابت خواهند بود. با اصلاح سبک زندگی و ورزش، شروع علائم دیابت را می‌توان سال‌ها به تأخیر انداخت یا از بروز آن جلوگیری کرد.</span></li>
+    </ul>
+    
+    <div class="infobox ib-green">
+      <span class="ib-icon">🍏</span>
+      <div>
+        <strong>نقش سطح اجتماعی و رفاه در مدیریت بیماری:</strong><br>
+        بخش بزرگی از درمان دیابت نوع ۲ منوط به رژیم غذایی دقیق، تهیه مواد سالم و غنی، و امکان پایش منظم قند خون است. بیماران با سطح اجتماعی و تحصیلی بالاتر به دلیل امکان پایبندی بهتر به این روتین‌ها، نتایج بهتری در اصلاح سبک زندگی و وزن دریافت می‌کنند.
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection sub-orange">
+    <h4>مکانیسم پدیده لاغری و علائم بالینی در دیابت نوع ۲</h4>
+    <p>برخی بیماران مبتلا به دیابت نوع ۲ با شروع بیماری شروع به لاغر شدن می‌کنند. پاتوفیزیولوژی این حالت به شرح زیر است:</p>
+    
+    <div class="mini-card mc-orange" style="margin-bottom: 15px;">
+      <h5>پدیده گرسنگی سلولی (Cellular Starvation)</h5>
+      <p>
+        به علت عدم ورود گلوکز به درون سلول‌ها، وضعیت گرسنگی سلولی برقرار می‌شود. سلول‌ها برای رفع این نیاز حیاتی، شروع به سوزاندن ذخایر چربی مفید بدن و همچنین شکستن پروتئین‌ها و اسیدهای آمینه عضلات خود می‌کنند تا از آن‌ها در مسیر کبد برای تولید قند (گلوکونئوژنز) استفاده کنند. این تخریب بافتی منجر به کاهش وزن و لاغر شدن شدید بیمار می‌شود.
+      </p>
+    </div>
+
+    <h5>نشانه‌های بالینی همراه با دیابت نوع ۲:</h5>
+    <ul class="list-styled orange">
+      <li><span class="li-content"><strong>پرخوری شدید (Polyphagia)، پرنوشی (Polydipsia) و پرادراری (Polyuria)</strong>.</span></li>
+      <li><span class="li-content"><strong>عفونت‌های مکرر قارچی و پوستی:</strong> بروز عفونت قارچی کاندیدیازیس واژینال (Vaginal Candidiasis) در زنان دیابتی بسیار شایع است. همچنین، عفونت‌های مکرر سیستم ادراری (UTI) و ریوی نیز در این افراد مکرراً دیده می‌شود.</span></li>
+      <li><span class="li-content"><strong>ریسک فاکتورهای بالینی همزمان:</strong> سن بالا، چاقی شکمی، کاهش فعالیت فیزیکی، فشار خون بالا (Hypertension)، کلسترول بالا و اختلالات چربی خون (Dyslipidemia)، سابقه خانوادگی.</span></li>
+    </ul>
+  </div>
+
+  <!-- ===================== SECTION 6 ===================== -->
+  <div class="section-header sh-brown">
+    <div class="icon">📜</div>
+    <div>۶. ریشه تاریخی نام‌گذاری "دیابت ملیتوس"</div>
+  </div>
+
+  <div class="subsection sub-brown">
+    <h4>چرا دیابت را دیابت ملیتوس (شیرین) می‌نامند؟</h4>
+    <p>نام‌گذاری این بیماری ریشه در تاریخ بالینی بسیار دور علم پزشکی دارد:</p>
+    <ul class="list-styled">
+      <li><span class="li-content"><strong>مشاهدات بالینی باستان:</strong> صدها سال قبل از اختراع آزمایشگاه و کیت‌های تشخیصی، پزشکان با بیمارانی مواجه می‌شدند که علائم عجیبی داشتند؛ ادرار بسیار زیادی دفع می‌کردند، زیاد غذا می‌خوردند اما وزن کم می‌کردند و مدام دچار عفونت می‌شدند.</span></li>
+      <li><span class="li-content"><strong>روش تشخیص قدیمی:</strong> در غیاب ابزار آزمایشگاهی، پزشکان ادرار این بیماران را بررسی می‌کردند. رنگ ادرار طبیعی بود و بوی خاصی نداشت. سرانجام پزشکان ادرار این بیماران را چشیدند و متوجه شدند که ادرار آن‌ها به شدت شیرین است!</span></li>
+      <li><span class="li-content"><strong>ریشه واژه ملیتوس (Mellitus):</strong> کلمه ملیتوس یک واژه لاتین است که از عسل و مواد شیرین گرفته شده است. بنابراین پزشکان نام این بیماری را "دیابت ملیتوس" یعنی دیابت با ادرار شیرین گذاشتند.</span></li>
+      <li><span class="li-content"><strong>دیدگاه ایمنی زیستی:</strong> ادرار انسان اساساً یک مایع استریل است که حاوی مقداری اوره و آب است، بنابراین از نظر سلامت بالینی چشیدن آن در دوران باستان برای تشخیص بیماری چندان با عارضه حادی همراه نبوده است.</span></li>
+    </ul>
+  </div>
+
+  <!-- ===================== SECTION 7 ===================== -->
+  <div class="section-header sh-green">
+    <div class="icon">🌿</div>
+    <div>۷. لایف‌استایل، اصلاح سبک زندگی و اشتباهات تغذیه‌ای بیماران</div>
+  </div>
+
+  <div class="subsection sub-green">
+    <h4>اشتباهات رایج بیماران در مصرف قندهای جایگزین و میوه‌ها</h4>
+    <p>دیابت درمان قطعی ندارد اما با مدیریت تغذیه حاوی سبزیجات و فیبر و قطع کامل قندها کاملاً قابل کنترل است. با این حال، اشتباهات رفتاری بزرگی در بیماران دیده می‌شود:</p>
+    
+    <div class="infobox ib-yellow">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <strong>اشتباه بالینی پر تکرار بیماران در کلینیک:</strong><br>
+        بسیار پیش می‌آید بیمار دیابتی با وجود مصرف منظم دوزهای بالای انسولین و داروها، همچنان قند خون بسیار بالایی دارد. وقتی از آن‌ها می‌پرسید: «چای خود را با چه می‌خورید؟» می‌گویند: «ما اصلاً قند سفید نمی‌خوریم؛ چای خود را با <strong>نبات، عسل طبیعی، توت خشک یا رطب (خرما)</strong> مصرف می‌کنیم!».
+        <br>این بزرگترین اشتباه بیماران دیابتی است. تمامی میوه‌ها و ترکیبات طبیعی فوق حاوی قند <strong>فروکتوز (Fructose)</strong> هستند که در بدن به سرعت شکسته شده و سطح قند خون را شدیداً بالا می‌برد. تمام این مواد طبیعی دارای کالری بالا و قند ساده بوده و کارایی داروها را خنثی می‌کنند.
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection sub-green">
+    <h4>سایر جنبه‌های اصلاح لایف‌استایل و درمان‌های غیردارویی</h4>
+    <ul class="list-styled green">
+      <li><span class="li-content"><strong>کاهش وزن و حذف چربی شکمی:</strong> در افراد چاق، کاهش حتی مقدار کمی چربی شکمی حساسیت گیرنده‌های انسولین را به شدت بهبود می‌دهد.</span></li>
+      <li><span class="li-content"><strong>فعالیت بدنی منظم:</strong> بیمارانی که توانایی ورزش سنگین ندارند، باید روزانه نیم ساعت تا یک ساعت پیاده‌روی منظم داشته باشند.</span></li>
+      <li><span class="li-content"><strong>کنترل و کاهش استرس:</strong> استرس محرک ترشح هورمون کورتیزول است. افزایش کورتیزول مستقیماً قند خون را بالا می‌برد.</span></li>
+      <li><span class="li-content"><strong>قطع دخانیات و الکل:</strong> الکل در مسیرهای متابولیکی به طور مستقیم به گلوکز و چربی تبدیل شده و قند خون را به شدت بالا می‌برد.</span></li>
+    </ul>
+  </div>
+
+  <!-- ===================== SECTION 8 ===================== -->
+  <div class="section-header sh-indigo">
+    <div class="icon">🔬</div>
+    <div>۸. فیزیولوژی غده پانکراس، مکانیسم سلولی ترشح و اثرات آنابولیک انسولین</div>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>تفاوت فارماکوکینتیک انسولین اندوژن و اگزوژن</h4>
+    <p>دو شکل انسولین در مسیر متابولیکی بدن تفاوت‌های اساسی در تصفیه دارند:</p>
+    <ul class="list-styled purple">
+      <li><span class="li-content"><strong>انسولین اندوژن (درون‌زاد):</strong> انسولینی که توسط پانکراس خود فرد ترشح می‌شود، در درجه اول عبور اول کبدی قرار دارد و عمدتاً در کبد متابولیزه می‌شود و سهم کمتری از تصفیه آن به کلیه‌ها می‌رسد.</span></li>
+      <li><span class="li-content"><strong>انسولین اگزوژن (برون‌زاد):</strong> انسولینی که به صورت دارویی از بیرون تزریق می‌شود، مستقیماً وارد گردش خون سیستمیک شده و عمدتاً در کلیه‌ها متابولیزه و دفع می‌شود.</span></li>
+      <li><span class="li-content"><strong>نکته داروسازی:</strong> برای پایدار ماندن فرآورده‌های انسولین اگزوژن در بدن، آن‌ها را معمولاً با فلز <strong>روی (Zinc)</strong> ترکیب می‌کنند.</span></li>
+    </ul>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>مکانیسم ترشح انسولین در سلول‌های بتای پانکراس</h4>
+    <p>فرآیند ترشح سلولی انسولین به دنبال افزایش قند خون دارای گام‌های بیوشیمیایی زیر است:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>گام بیوشیمیایی</th>
+            <th>پدیده سلولی و تبادل یونی</th>
+            <th>نتیجه نهایی فرآیند</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>گام اول</strong></td>
+            <td>ورود گلوکز به درون سلول‌های بتای جزایر لانگرهانس</td>
+            <td>گلوکز وارد چرخه‌های متابولیکی شده و سطح ATP درون‌سلولی بالا می‌رود.</td>
+          </tr>
+          <tr>
+            <td><strong>گام دوم</strong></td>
+            <td>بسته شدن کانال‌های پتاسیمی (K+) وابسته به ATP</td>
+            <td>با بسته شدن این کانال‌ها، خروج پتاسیم متوقف شده و غشای سلول دپلاریزه (Depolarized) می‌شود.</td>
+          </tr>
+          <tr>
+            <td><strong>گام سوم</strong></td>
+            <td>باز شدن کانال‌های کلسیمی (Ca2+) وابسته به ولتاژ</td>
+            <td>کلسیم به شدت وارد سلول شده و غلظت آن در سیتوپلاسم افزایش می‌یابد.</td>
+          </tr>
+          <tr>
+            <td><strong>گام چهارم</strong></td>
+            <td>اگزوسیتوز وزیکول‌های حاوی انسولین</td>
+            <td>افزایش کلسیم باعث حرکت وزیکول‌ها به سمت غشا و آزاد شدن (ترشح) انسولین به جریان خون می‌گردد.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top: 20px;">
+      <h5>عوامل مؤثر بر تنظیم ترشح انسولین:</h5>
+      <div class="grid2">
+        <div class="mini-card mc-green">
+          <h6>عوامل افزاینده (Stimulators):</h6>
+          <ul class="list-styled green">
+            <li><span class="li-content">گلوکز خوراکی</span></li>
+            <li><span class="li-content">گلوکاگون (Glucagon)</span></li>
+            <li><span class="li-content">اسیدهای چرب آزاد</span></li>
+            <li><span class="li-content">داروهای سولفونیل‌اوره (مانند گلی‌بنکلامید، گلیکلازید)</span></li>
+          </ul>
+        </div>
+        <div class="mini-card mc-red">
+          <h6>عوامل کاهنده (Inhibitors):</h6>
+          <ul class="list-styled red">
+            <li><span class="li-content">بتابلاکرها (Beta-blockers)</span></li>
+            <li><span class="li-content">آلفا آگونیست‌ها</span></li>
+            <li><span class="li-content">دیازوکساید (Diazoxide)</span></li>
+            <li><span class="li-content">دیورتیک‌های تیازیدی</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>عملکرد فیزیولوژیک انسولین در بافت‌های هدف</h4>
+    <p>انسولین با اتصال به گیرنده‌های اختصاصی خود دارای فعالیت <strong>تیروزین کیناز (Tyrosine Kinase)</strong> اثرات آنابولیک (سازنده) گسترده‌ای بر جای می‌گذارد:</p>
+    
+    <div class="grid2">
+      <div class="mini-card mc-blue">
+        <h5>۱. اثرات کبدی (Hepatic)</h5>
+        <ul class="list-styled blue">
+          <li><span class="li-content">افزایش ورود گلوکز به کبد.</span></li>
+          <li><span class="li-content">تحریک و افزایش سنتز گلیکوژن (Glycogen Synthesis).</span></li>
+          <li><span class="li-content">مهار فرآیند گلیکوژنولیز (شکستن گلیکوژن به قند) و گلوکونئوژنز (مهار تولید قند از منابع غیرکربوهیدراتی).</span></li>
+          <li><span class="li-content">افزایش جذب سلولی پتاسیم (K+) و فسفات.</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-purple">
+        <h5>۲. اثرات عضلانی (Muscle)</h5>
+        <ul class="list-styled purple">
+          <li><span class="li-content">افزایش برداشت مواد مغذی و گلوکز توسط سلول عضلانی.</span></li>
+          <li><span class="li-content">تحریک شدید پروتئین‌سازی و ذخیره گلیکوژن در عضله.</span></li>
+          <li><span class="li-content">جلوگیری از تحلیل عضلانی و مهار کاتابولیسم اسیدهای آمینه.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mini-card mc-orange" style="margin-top: 15px;">
+      <h5>۳. اثرات در بافت چربی (Adipose Tissue)</h5>
+      <p>انسولین با ورود اسیدهای چرب آزاد به بافت چربی، فرآیند سنتز تری‌گلیسریدها و ذخیره‌سازی چربی (لیپوژنز) را افزایش می‌دهد.</p>
+      <ul class="list-styled orange">
+        <li><span class="li-content">به همین دلیل، انسولین می‌تواند باعث افزایش وزن و چاقی شود؛ بیمار برای جلوگیری از این حالت حتماً باید رژیم غذایی و ورزش منظم را در برنامه خود قرار دهد.</span></li>
+        <li><span class="li-content"><strong>تبدیل گلوکز به گلیسرول فسفات</strong> و <strong>فعال شدن آنزیم لیپوپروتئین لیپاز</strong> از دیگر سازوکارهای آن است.</span></li>
+        <li><span class="li-content"><strong>نکته بالینی:</strong> در افراد چاق، سطح انسولین پایه (اندوژن) خون به صورت جبرانی همیشه بالاتر از حد طبیعی است.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 9 ===================== -->
+  <div class="section-header sh-teal">
+    <div class="icon">💉</div>
+    <div>۹. طبقه‌بندی فارماکولوژیک و بیوشیمیایی انواع انسولین تزریقی</div>
+  </div>
+
+  <div class="subsection sub-teal">
+    <h4>انواع فراورده‌های انسولینی بر اساس سرعت و طول اثر</h4>
+    <p>انسولین‌ها بر اساس خصوصیات فارماکوکینتیکی به ۴ دسته اصلی تقسیم می‌شوند:</p>
+
+    <div class="mini-card mc-teal" style="margin-bottom: 15px;">
+      <h5>۱. انسولین‌های فوق سریع‌اثر (Ultra-Rapid Acting)</h5>
+      <p>مانند انسولین <strong>لیسپرو (Lispro)</strong> و <strong>آسپارت (Aspart)</strong></p>
+      <ul class="list-styled teal">
+        <li><span class="li-content"><strong>زمان شروع اثر:</strong> ۵ تا ۲۵ دقیقه پس از تزریق زیرجلدی.</span></li>
+        <li><span class="li-content"><strong>طول مدت اثر:</strong> حدود ۴ ساعت در خون باقی می‌ماند.</span></li>
+        <li><span class="li-content"><strong>کاربرد اصلی:</strong> برای کنترل قند خون بعد از غذا (جلوگیری از پیک‌های سریع قند خون بعد از وعده غذایی) تجویز می‌شود.</span></li>
+        <li><span class="li-content"><strong>پروتکل تزریق:</strong> معمولاً ۳ بار در روز قبل از وعده‌های اصلی غذا به شکل قلم (Pen) تزریق می‌شود؛ به شرطی که بیمار حتماً بلافاصله غذا بخورد. اگر بیمار بعد از تزریق در صرف غذا تأخیر کند یا به فعالیت بدنی سنگین بپردازد، به سرعت دچار افت قند خون (هایپوگلیسمی) خواهد شد.</span></li>
+      </ul>
+    </div>
+
+    <div class="mini-card mc-blue" style="margin-bottom: 15px;">
+      <h5>۲. انسولین‌های کوتاه‌اثر (Short-Acting)</h5>
+      <p>مانند انسولین <strong>ریگولار (Regular)</strong> یا انسولین کریستال</p>
+      <ul class="list-styled blue">
+        <li><span class="li-content"><strong>زمان شروع اثر:</strong> حدود ۳۰ تا ۶۰ دقیقه پس از تزریق.</span></li>
+        <li><span class="li-content"><strong>طول مدت اثر:</strong> ۵ تا ۷ ساعت در بدن فعال می‌ماند.</span></li>
+        <li><span class="li-content"><strong>روش تزریق معمول:</strong> نیاز به روزی ۳ بار تزریق دارد و با <strong>سرنگ انسولین</strong> تزریق می‌شود (برخلاف مدل‌های فوق سریع، فرم قلمی یا Pen معمولی ندارد؛ البته آسپارت نوعی کوتاه اثر قلمی نیز به شمار می‌رود).</span></li>
+        <li><span class="li-content"><strong>تزریق انفوزیون وریدی (تنها فرم مجاز وریدی):</strong> انسولین ریگولار تنها انسولینی است که اجازه داریم آن را به صورت انفوزیون مداوم وریدی (IV Infusion) برای درمان اورژانسی کتوآسیدوز (DKA) یا تنظیم قند خون بیماران بستری در بخش‌های بیمارستانی تزریق کنیم.</span></li>
+      </ul>
+    </div>
+
+    <div class="infobox ib-blue">
+      <span class="ib-icon">🦠</span>
+      <div>
+        <strong>تزریق انسولین رگولار در عوارض کورتون‌تراپی بحران کرونا:</strong><br>
+        در دوران کرونا مشخص شد تنها دارویی که می‌تواند التهاب شدید ریه و طوفان سایتوکینی (Cytokine Storm) را در بیماران مهار کند، کورتون‌های قوی مانند <strong>آمپول دگزامتازون (روزی دو عدد)</strong> است. این داروها قند هر بیماری (حتی غیردیابتی‌ها) را به شدت بالا می‌بردند. در بیمارستان‌ها اگر قند این بیماران از ۲۰۰ میلی‌گرم بر دسی‌لیتر بالاتر می‌رفت، انسولین رگولار را به صورت انفوزیون مداوم وریدی برای مهار دقیق قند تزریق می‌کردند.
+      </div>
+    </div>
+
+    <div class="mini-card mc-purple" style="margin-bottom: 15px;">
+      <h5>۳. انسولین‌های متوسط‌اثر (Intermediate-Acting)</h5>
+      <p>مانند انسولین <strong>NPH (Neutral Protamine Hagedorn)</strong></p>
+      <ul class="list-styled purple">
+        <li><span class="li-content"><strong>زمان شروع اثر:</strong> ۱ تا ۲ ساعت پس از تزریق.</span></li>
+        <li><span class="li-content"><strong>طول مدت اثر:</strong> ۱۸ تا ۲۴ ساعت در بدن باقی می‌ماند و برای ایجاد پوشش پایه (بیسال / Basal) مصرف می‌شود.</span></li>
+      </ul>
+    </div>
+
+    <div class="mini-card mc-orange">
+      <h5>۴. انسولین‌های طولانی‌اثر (Long-Acting)</h5>
+      <p>مانند انسولین <strong>گلارژین (Glargine)</strong> یا همان لانتوس (Lantus)</p>
+      <ul class="list-styled orange">
+        <li><span class="li-content"><strong>زمان شروع اثر:</strong> ۴ تا ۶ ساعت بعد از تزریق آغاز می‌شود.</span></li>
+        <li><span class="li-content"><strong>طول مدت اثر:</strong> تا ۳۶ ساعت اثر پایدار در بدن دارد و فاقد پیک اثر (Peakless) است. این دارو لول پایه انسولین را در طول شبانه‌روز یکنواخت نگه می‌دارد.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 10 ===================== -->
+  <div class="section-header sh-indigo">
+    <div class="icon">📈</div>
+    <div>۱۰. رژیم‌های انسولین‌تراپی بالینی، تنظیم دوز و لیپودیستروفی</div>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>الف) رژیم درمانی بیسال-بولوس (چهار بار تزریق در روز)</h4>
+    <p>در یک انسان سالم، بدن همیشه یک مقدار ثابت انسولین پایه دارد و با هر وعده غذایی یک پیک ترشحی می‌زند. در دیابت نوع ۱ باید همین الگو شبیه‌سازی شود:</p>
+    <ul class="list-styled">
+      <li><span class="li-content"><strong>انسولین بیسال (پایه):</strong> تزریق یک دوز انسولین <strong>گلارژین (لانتوس)</strong> در شب (حدود نیم ساعت قبل از خواب) جهت شبیه‌سازی ترشح پایه ۲۴ ساعته.</span></li>
+      <li><span class="li-content"><strong>انسولین بولوس (وعده غذا):</strong> تزریق ۳ بار در روز انسولین سریع‌الاثر مانند <strong>آسپارت (نووراپیید)</strong> قبل از وعده‌های اصلی صبحانه، ناهار و شام.</span></li>
+      <li><span class="li-content">بنابراین بیمار باید روزی <strong>۴ نوبت تزریق</strong> انسولین داشته باشد که این روش محبوب‌ترین و دقیق‌ترین الگوی کنترلی در میان پزشکان است.</span></li>
+    </ul>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>ب) رژیم درمانی با انسولین‌های ترکیبی (میکس / Premixed Insulins)</h4>
+    <p>برای سهولت درمان در برخی بیماران از انسولین‌های ترکیبی آماده استفاده می‌شود:</p>
+    <ul class="list-styled">
+      <li><span class="li-content"><strong>فرمولاسیون ترکیبی (مانند نوومیکس / NovoMix):</strong> حاوی مخلوطی از انسولین متوسط‌اثر NPH و کوتاه‌اثر ریگولار به نسبت‌های مشخص مانند ۷۰/۳۰ (۷۰٪ NPH برای تنظیم سطح پایه و ۳۰٪ ریگولار برای کنترل قند بعد از غذا) یا نسبت ۵۰/۵۰ است.</span></li>
+      <li><span class="li-content"><strong>پروتکل تزریق:</strong> بیمار تنها دو بار در روز (یک بار قبل از صبحانه و یک بار قبل از شام) تزریق می‌کند. به بیمار آموزش داده می‌شود که وعده ناهار خود را سبک‌تر میل کند زیرا پیک دارویی اختصاصی برای ناهار وجود ندارد.</span></li>
+      <li><span class="li-content"><strong>نکته بالینی:</strong> پزشکان رژیم تزریقی ۴ بار در روز (بیسال-بولوس) را نسبت به رژیم ترکیبی ۲ بار در روز ترجیح می‌دهند، زیرا قند خون را بسیار دقیق‌تر و بهتر کنترل می‌کند.</span></li>
+    </ul>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>ج) پروتکل پایش و تنظیم دوز انسولین در بیماران سرپایی</h4>
+    <p>تنظیم دوز به دو روش بستری در بیمارستان یا پایش سرپایی در منزل انجام می‌شود:</p>
+    <ul class="list-styled">
+      <li><span class="li-content"><strong>تنظیم دوز در بیمارستان:</strong> بیمار بستری شده و قند خون او مدام مانیتور می‌شود؛ این روش خطر افت ناگهانی قند را به حداقل می‌رساند.</span></li>
+      <li><span class="li-content"><strong>تنظیم دوز سرپایی در منزل (بیماران با سطح اجتماعی و تحصیلات بالا):</strong> اگر بیمار دقیق و قابل اعتماد باشد، درمان انسولین را با دوز بسیار پایین آغاز می‌کنیم تا ریسک هایپوگلیسمی شدید (که می‌تواند منجر به سکته قلبی شود) مهار شود. به بیمار آموزش می‌دهیم روزانه ۵ نوبت قند خود را با گلوکومتر اندازه گرفته و یادداشت کند: ناشتا صبحگاهی، بعد از صبحانه، بعد از ناهار، بعد از شام و شب موقع خواب. بیمار پس از ۴ تا ۵ روز جدول قند خود را می‌آورد و پزشک بر اساس آن دوز انسولین را به آرامی بالا می‌برد.</span></li>
+    </ul>
+  </div>
+
+  <div class="subsection sub-indigo">
+    <h4>د) محل‌های تزریق و پیشگیری از عارضه لیپودیستروفی</h4>
+    <p>انسولین زیرجلدی باید در نواحی مجاز تزریق شود: <strong>بازوها، اطراف ناف (شکم) و بخش خارجی عضلات ران پا</strong>.</p>
+    <div class="infobox ib-red">
+      <span class="ib-icon">⚠️</span>
+      <div>
+        <strong>عوارض عدم چرخش محل تزریق (لیپودیستروفی):</strong><br>
+        بیمار موظف است در هر نوبت، محل تزریق انسولین را تغییر دهد و جابه‌جا کند. اگر تزریق انسولین مکرراً و به صورت مداوم در یک محل ثابت انجام شود، چربی‌های زیرجلدی آن ناحیه تخریب شده و سلول‌های چربی از بین می‌روند. این امر منجر به بروز عارضه‌ای به نام <strong>لیپودیستروفی (Lipodystrophy)</strong> می‌شود که ظاهر پوستی فوق‌العاده زشت، فرورفته و بدی در اندام بیمار ایجاد کرده و در جذب انسولین اختلال ایجاد می‌کند.
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 11 ===================== -->
+  <div class="section-header sh-red">
+    <div class="icon">🚑</div>
+    <div>۱۱. عارضه اورژانسی هیپوگلیسمی و پروتکل مدیریت بالینی</div>
+  </div>
+
+  <div class="subsection sub-red">
+    <h4>شناخت علائم و نشانه‌های افت قند خون (Hypoglycemia)</h4>
+    <p>هیپوگلیسمی عارضه‌ای فوق‌العاده حاد، خطرناک و مرگبار (به مراتب خطرناک‌تر از هایپرگلیسمی) است. پزشک باید علائم آن را به خوبی بشناسد:</p>
+    <ul class="list-styled red">
+      <li><span class="li-content"><strong>علائم اولیه (سمپاتیک):</strong> تعریق سرد شدید، بی حالی و سستی (Lethargy)، لرزش اندام‌ها و دست‌ها (Tremor)، تپش قلب شدید (Palpitations)، احساس گرسنگی ناگهانی و خستگی بسیار شدید.</span></li>
+      <li><span class="li-content"><strong>علائم عصبی (نوروگلیکوپنیک / Neuroglycopenic):</strong> اختلال در تمرکز ذهنی، گیجی و منگی شدید، تاربینی، اختلال در تکلم و صحبت کردن، سرگیجه و در نهایت افت هوشیاری و سقوط به کما.</span></li>
+    </ul>
+  </div>
+
+  <div class="subsection sub-red">
+    <h4>پروتکل بالینی مدیریت اورژانسی هیپوگلیسمی</h4>
+    <p>درمان بر اساس سطح هوشیاری بیمار تعیین می‌شود:</p>
+    
+    <div class="grid2">
+      <div class="mini-card mc-green">
+        <h5>۱. بیمار کاملاً هوشیار است (قانون ۱۵-۱۵)</h5>
+        <p>به سرعت قند ساده از راه دهان تجویز می‌شود:</p>
+        <ul class="list-styled green">
+          <li><span class="li-content">تجویز سریع ۱۵ گرم قند ساده (مانند دو حبه قند معمولی، یا یک فنجان آب‌میوه شیرین، یا یک فنجان شیر).</span></li>
+          <li><span class="li-content">اندازه‌گیری مجدد قند خون ۱۵ دقیقه بعد؛ در صورت پایداری علائم و عدم افزایش قند، دوز قند تکرار شود.</span></li>
+        </ul>
+      </div>
+
+      <div class="mini-card mc-red">
+        <h5>۲. بیمار غیرهوشیار است (کما / Coma)</h5>
+        <p>دلایل افت ناگهانی قند در این بیماران شامل: تزریق انسولین بدون مصرف غذا، ورزش سنگین ناگهانی، اسهال و استفراغ شدید یا سوءجذب گوارشی است.</p>
+        <ul class="list-styled red">
+          <li><span class="li-content"><strong>ممنوعیت مطلق:</strong> از راه دهان به بیمار غیرهوشیار چیزی نخورانید (ریسک بالای خفگی و آسپیره شدن ریه).</span></li>
+          <li><span class="li-content"><strong>روش‌های دارویی:</strong> تزریق <strong>آمپول گلوکاگون</strong> به صورت زیرجلدی (Subcutaneous) یا عضلانی (IM)، یا تزریق وریدی سریع <strong>محلول دکستروز ۵۰ درصد (D50W)</strong> در عرض ۱ تا ۳ دقیقه که بیمار را بلافاصله از کما خارج می‌کند.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="infobox ib-red" style="margin-top: 15px;">
+      <span class="ib-icon">🛑</span>
+      <div>
+        <strong>قانون طلایی نجات جان بیمار در اورژانس (تزریق کورکورانه قند):</strong><br>
+        بیمار دیابتی غیرهوشیار (کما رفته) را به اورژانس می‌آورند. می‌خواهید با دستگاه گلوکومتر قندش را بگیرید، اما دستگاه به دلیل قند بسیار بالا یا بسیار پایین <strong>ارور (Error)</strong> می‌دهد و قند خون را نشان نمی‌دهد. آزمایش اورژانسی بیمارستان نیز دست‌کم ۳۰ الی ۶۰ دقیقه زمان می‌برد تا پاسخ دهد.
+        <br><strong>اقدام حیاتی فوری:</strong> تا زمان آماده شدن جواب دقیق آزمایشگاه، <strong>بلافاصله برای بیمار سرم قند حاوی گلوکز (دکستروز ۵۰٪ وریدی) تزریق کنید</strong>.
+        <br><strong>توجیه پاتوفیزیولوژیک این اقدام:</strong> اگر قند واقعی بیمار ۵۰۰ (بالا) باشد، با تزریق دکستروز، قند او نهایتاً به ۵۵۰ می‌رسد که در عرض این نیم ساعت هیچ آسیب خاص یا بحران حادی برای بیمار ایجاد نمی‌کند. اما اگر قند واقعی بیمار ۴۰ (پایین) باشد و ما به مدت نیم ساعت منتظر جواب آزمایشگاه بمانیم، بیمار به علت مرگ سلول‌های مغزی به سرعت فوت می‌کند یا دچار آسیب مغزی پایدار می‌شود. با این اقدام قند ۴۰ بیمار فوراً به ۸۰ رسیده و بیمار کما رفته در عرض چند دقیقه جلوی چشم شما چشمانش را باز کرده، هوشیار شده و از مرگ حتمی نجات می‌یابد.
+      </div>
+    </div>
+  </div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+  <p>تهیه شده توسط احمدرضا عبداللهی پور</p>
+  <p>برای دریافت فایل های بیشتر به بات تلگرامی مراجعه کنید
+                        
+<a href="https://t.me/Medical_house_bot" target="_blank" style="
+    display: inline-block;
+    padding: 5px 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;">
+    🤖 شروع گفتگو با بات
+</a></p>
+</div>
+
+</div> <!-- END MAIN -->
+
+<!-- ===== نوار شناور ابزار چند پلتفرمی ===== -->
+<div id="highlight-panel">
+  <span>🖍️ ابزار مطالعه:</span>
+  <button class="hl-btn hl-btn-yellow" onclick="applyColorHighlight('#fff59d')" title="زرد"></button>
+  <button class="hl-btn hl-btn-green" onclick="applyColorHighlight('#c8e6c9')" title="سبز"></button>
+  <button class="hl-btn hl-btn-blue" onclick="applyColorHighlight('#bbdefb')" title="آبی"></button>
+  <button class="hl-btn hl-btn-pink" onclick="applyColorHighlight('#f8bbd0')" title="صورتی"></button>
+  <button class="panel-action-btn" onclick="addNoteAtSelection()">📝 یادداشت</button>
+  <button class="panel-action-btn" onclick="viewAllNotes()">🔍 لیست یادداشت‌ها</button>
+  <button class="panel-action-btn panel-action-btn-red" onclick="clearSelectedHighlight()">❌ پاک‌کردن</button>
+  <button class="panel-action-btn" style="background:#2e7d32;" onclick="exportModifiedHTML()">📥 خروجی گرفتن از فایل</button>
+</div>
+
+<!-- پنجره مودال ثبت/ویرایش یادداشت -->
+<div class="modal-overlay" id="note-edit-modal">
+  <div class="modal-card">
+    <h4 id="modal-title">ثبت یادداشت جدید در این محل</h4>
+    <textarea class="modal-textarea" id="modal-note-input" placeholder="نکته مهم کلاسی خود را جهت مرور سریع بنویسید..."></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveNoteChanges()">💾 ذخیره تغییرات</button>
+      <button class="btn btn-danger" id="btn-delete-note" onclick="deleteActiveNote()">❌ حذف یادداشت</button>
+      <button class="btn btn-secondary" onclick="closeNoteModal()">انصراف</button>
+    </div>
+  </div>
+</div>
+
+<!-- پنجره مودال لیست همه‌ی یادداشت‌ها -->
+<div class="modal-overlay" id="all-notes-modal">
+  <div class="modal-card" style="max-height: 80%; overflow-y: auto; max-width: 600px;">
+    <h4>📋 تمام یادداشت‌های ثبت‌شده شما</h4>
+    <div id="all-notes-list" style="margin-bottom: 20px;">
+      <!-- لیست پویا به صورت خودکار پر خواهد شد -->
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" onclick="closeAllNotesModal()">بستن پنجره</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const storageStateKey = "gi_pharma_session9_interactive_state";
+  let savedRange = null; 
+  let activeMarker = null;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    loadPageState();
+  });
+
+  function savePageState() {
+    const mainHTML = document.querySelector('.main').innerHTML;
+    localStorage.setItem(storageStateKey, mainHTML);
+  }
+
+  function loadPageState() {
+    const savedHTML = localStorage.getItem(storageStateKey);
+    if (savedHTML) {
+      document.querySelector('.main').innerHTML = savedHTML;
+    }
+  }
+
+  function applyColorHighlight(colorHex) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+      alert("لطفاً ابتدا متنی از جزوه را با ماوس یا لمس طولانی انتخاب کنید.");
+      return;
+    }
+
+    const main = document.querySelector('.main');
+    const originalEditable = main.contentEditable;
+    
+    main.contentEditable = "true";
+    
+    try {
+      document.execCommand("styleWithCSS", false, true);
+      document.execCommand("backColor", false, colorHex);
+    } catch (e) {
+      console.error("خطای هایلایت:", e);
+    }
+    
+    main.contentEditable = originalEditable;
+    selection.removeAllRanges();
+    savePageState();
+  }
+
+  function clearSelectedHighlight() {
+    applyColorHighlight('transparent');
+  }
+
+  function addNoteAtSelection() {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+      alert("لطفاً ابتدا بخشی از متن را با کشیدن انگشت یا ماوس انتخاب کنید تا یادداشت به آنجا متصل شود.");
+      return;
+    }
+
+    savedRange = selection.getRangeAt(0).cloneRange();
+    
+    activeMarker = null; 
+    document.getElementById("modal-title").innerText = "ثبت یادداشت جدید در این محل";
+    document.getElementById("modal-note-input").value = "";
+    document.getElementById("btn-delete-note").style.display = "none";
+    document.getElementById("note-edit-modal").style.display = "flex";
+  }
+
+  function saveNoteChanges() {
+    const text = document.getElementById("modal-note-input").value.trim();
+    if (!text) {
+      alert("لطفاً متن یادداشت را وارد کنید.");
+      return;
+    }
+
+    if (activeMarker === null) {
+      if (savedRange) {
+        const marker = document.createElement("span");
+        marker.className = "note-marker";
+        marker.setAttribute("data-note", text);
+        marker.innerHTML = `📝<span class="note-tooltip">${escapeHTML(text)}</span>`;
+        marker.contentEditable = "false";
+        
+        try {
+          savedRange.collapse(false);
+          savedRange.insertNode(marker);
+        } catch (e) {
+          console.error("Error inserting marker:", e);
+          alert("امکان درج یادداشت در این بخش به دلیل تداخل تگ‌ها وجود ندارد. لطفا متن ساده‌تری را انتخاب کنید.");
+        }
+        savedRange = null;
+      } else {
+        alert("محدوده متن انتخاب شده معتبر نیست. لطفاً مجدداً متن را انتخاب کنید.");
+        return;
+      }
+    } else {
+      activeMarker.setAttribute("data-note", text);
+      activeMarker.innerHTML = `📝<span class="note-tooltip">${escapeHTML(text)}</span>`;
+    }
+
+    closeNoteModal();
+    savePageState();
+  }
+
+  function deleteActiveNote() {
+    if (activeMarker && confirm("آیا مایل به حذف این یادداشت هستید؟")) {
+      activeMarker.remove();
+      closeNoteModal();
+      savePageState();
+    }
+  }
+
+  function closeNoteModal() {
+    document.getElementById("note-edit-modal").style.display = "none";
+    activeMarker = null;
+    savedRange = null;
+  }
+
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("note-marker")) {
+      activeMarker = e.target;
+      const savedText = activeMarker.getAttribute("data-note") || "";
+      document.getElementById("modal-title").innerText = "مشاهده و ویرایش یادداشت";
+      document.getElementById("modal-note-input").value = savedText;
+      document.getElementById("btn-delete-note").style.display = "inline-block";
+      document.getElementById("note-edit-modal").style.display = "flex";
+    }
+  });
+
+  function viewAllNotes() {
+    const markers = document.querySelectorAll(".note-marker");
+    const listContainer = document.getElementById("all-notes-list");
+    listContainer.innerHTML = "";
+
+    if (markers.length === 0) {
+      listContainer.innerHTML = '<p style="text-align:center; color:var(--muted); font-size:14px; padding:20px 0;">هیچ یادداشتی در کل متن ثبت نشده است.</p>';
+      document.getElementById("all-notes-modal").style.display = "flex";
+      return;
+    }
+
+    markers.forEach((marker, index) => {
+      const noteText = marker.getAttribute("data-note") || "";
+      const context = marker.previousSibling ? marker.previousSibling.textContent.slice(-35) : "...";
+      
+      const card = document.createElement("div");
+      card.className = "mini-card mc-blue";
+      card.style.marginBottom = "12px";
+      card.innerHTML = `
+        <div style="font-size:11px; color:var(--muted); margin-bottom:5px;">یادداشت شماره ${index + 1} (متن مجاور: "...${escapeHTML(context)}")</div>
+        <div style="font-weight:bold; font-size:14px; line-height:1.6; white-space:pre-wrap; color:var(--text);">${escapeHTML(noteText)}</div>
+        <div style="margin-top:10px; display:flex; gap:8px;">
+          <button onclick="scrollToMarker(${index})" class="tag tag-blue" style="border:none; cursor:pointer; padding:4px 10px;">🔍 پرش به محل یادداشت</button>
+          <button onclick="deleteMarkerFromList(${index})" class="tag tag-red" style="border:none; cursor:pointer; padding:4px 10px;">❌ حذف</button>
+        </div>
+      `;
+      listContainer.appendChild(card);
+    });
+
+    document.getElementById("all-notes-modal").style.display = "flex";
+  }
+
+  window.scrollToMarker = function(index) {
+    const markers = document.querySelectorAll(".note-marker");
+    if (markers[index]) {
+      closeAllNotesModal();
+      markers[index].scrollIntoView({ behavior: "smooth", block: "center" });
+      
+      const originalBg = markers[index].style.backgroundColor;
+      markers[index].style.backgroundColor = "#ff5252";
+      markers[index].style.transform = "scale(1.4)";
+      
+      setTimeout(() => {
+        markers[index].style.backgroundColor = originalBg;
+        markers[index].style.transform = "scale(1)";
+      }, 1500);
+    }
+  };
+
+  window.deleteMarkerFromList = function(index) {
+    if (confirm("آیا مایل به حذف این یادداشت هستید؟")) {
+      const markers = document.querySelectorAll(".note-marker");
+      if (markers[index]) {
+        markers[index].remove();
+        savePageState();
+        viewAllNotes(); 
+      }
+    }
+  };
+
+  function exportModifiedHTML() {
+    const docClone = document.cloneNode(true);
+    const currentMainHTML = document.querySelector('.main').innerHTML;
+    docClone.querySelector('.main').innerHTML = currentMainHTML;
+    
+    const htmlString = '<!DOCTYPE html>\n' + docClone.documentElement.outerHTML;
+    
+    const blob = new Blob([htmlString], { type: "text/html;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "pharmacology_session9_interactive_output.html";
+    link.click();
+  }
+
+  function closeAllNotesModal() {
+    document.getElementById("all-notes-modal").style.display = "none";
+  }
+
+  function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, 
+      tag => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        "'": '&#39;',
+        '"': '&quot;'
+      }[tag] || tag)
+    );
+  }
+</script>
+
+</body>
+</html>
